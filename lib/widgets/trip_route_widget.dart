@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:routing_app/utils/google_places.dart';
 import '../classes/trip_model.dart';
 import 'package:provider/provider.dart';
 import 'package:routing_app/providers/user_data_provider.dart';

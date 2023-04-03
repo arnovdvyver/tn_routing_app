@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>924542924152-fni3k38a5bo5r382evqvq20a2hb9f2es.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.924542924152-fni3k38a5bo5r382evqvq20a2hb9f2es</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDWP1ZGHz7eyrsDdqmkrn1iTbb1FQMY_Gs</string>
+	<key>GCM_SENDER_ID</key>
+	<string>924542924152</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>dev.arnovdvyver.routingApp</string>
+	<key>PROJECT_ID</key>
+	<string>optiodyssey</string>
+	<key>STORAGE_BUCKET</key>
+	<string>optiodyssey.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:924542924152:ios:892d684e1530f688d0048d</string>
+</dict>
+</plist>

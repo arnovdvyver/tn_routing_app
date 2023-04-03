@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "924542924152",
+    "project_id": "optiodyssey",
+    "storage_bucket": "optiodyssey.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:924542924152:android:4dcd4173a67d671bd0048d",
+        "android_client_info": {
+          "package_name": "dev.arnovdvyver.routing_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "924542924152-jmk0851bjhdl30drphvvbmkgndq13uvl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4tR4pthcOl_LIg2KXsbF-SXYYfdc5dXI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "924542924152-jmk0851bjhdl30drphvvbmkgndq13uvl.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "924542924152-fni3k38a5bo5r382evqvq20a2hb9f2es.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "dev.arnovdvyver.routingApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -80,7 +80,8 @@ class _SelectedTripState extends State<SelectedTrip> {
                           ),
                         ),
                     
-                    Text("Collected Travel Time ${user.selectedTrip.accumulatedDistance}")
+                    (user.inProgress) ? Text("User Travelled Distance: ${user.selectedTrip.accumulatedDistance}") 
+                      : const Text(" ")
                   ]
                 ) 
               ),

@@ -39,7 +39,6 @@ class Trip {
 
     if (_stopCount > 1) {
       _directionsController.updateProperties(_tripStops, updatePartitions);
-      updatePartitions();
     } else {
       _directionsController.noRoute();
     }
@@ -100,13 +99,16 @@ class Trip {
   //update leg distance associated with each stop
   void updatePartitions() {
     int count = _directionsController.tripLegs.length;
-    print(count);
 
     //set partitions
     for (int i = 0; i < count; i++) {
+      _tripStops[0].setDistancePartition(0.0);
+
       double value = _directionsController.tripLegs[i];
       _tripStops[i + 1].setDistancePartition(value);
     }
+
+    notifierCallback();
   }
 
   void incrementUserDistance(double value) {
@@ -126,9 +128,22 @@ class Trip {
     return "${(_directionsController.time  / 60).round()} mins";
   }
 
+  void resetTravelledDistance() {
+    _userDistanceTravelled = 0.0;
+    notifierCallback();
+  }
+
+  void resetAllVisitedFlags() {
+    for (var e in _tripStops) {
+      e.hasBeenVisited = false;
+    }
+    notifierCallback();
+  }
+
   //get trip name
   String get name => _name;
   int get tripStopCount => _stopCount;
   List<LocationModel> get tripStops => _tripStops;
-  String get accumulatedDistance => "${(_userDistanceTravelled / 1000).round()} KM";
+  double get distanceTravelled => _userDistanceTravelled;
+  String get accumulatedDistance => "${(distanceTravelled / 1000).round()} KM";
 }

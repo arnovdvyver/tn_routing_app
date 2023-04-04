@@ -3,6 +3,7 @@
 class LocationModel {
   final String locationName, placeId, address;
   Map geoPoints;
+  bool hasBeenVisited = false;
   double distancePartition = 0;
 
   //constructor

@@ -70,12 +70,17 @@ class _TripRouteState extends State<TripRoute> {
                             Align(
                               alignment: Alignment.centerRight,
                               child: Visibility(
-                                visible: (user.inProgress) ? true : false,
+                                visible: (user.inProgress && e.partition != 0) ? true : false,
                                 child: IconButton(
                                 onPressed:() {
+                                  if (!e.hasBeenVisited) {
+                                    e.hasBeenVisited = true;
                                     user.selectedTrip.incrementUserDistance(e.partition);
+                                  }
                                 },
-                                icon: const Icon(Icons.check)
+                                icon: (!e.hasBeenVisited) 
+                                  ? const Icon(Icons.radio_button_unchecked) 
+                                  : const Icon(Icons.radio_button_checked),
                             ),
                           )
                               )
@@ -100,7 +105,9 @@ class _TripRouteState extends State<TripRoute> {
 
                         Align(
                           alignment: Alignment.bottomLeft,
-                          child: Text("${(e.partition / 1000).round()} KM Traveled"),
+                          child: (e.partition != 0.0) 
+                            ? Text("${(e.partition / 1000).round()} KM") 
+                            : const Text("Starting Location"),
                         )
                       ],
                     )

@@ -152,6 +152,8 @@ class User with ChangeNotifier {
 
   //set trip the current active trip inProgress
   void setInProgressState() {
+    _activeTrip.resetTravelledDistance();
+    _activeTrip.resetAllVisitedFlags();
     _isInProgress = (!_isInProgress) ? true : false;
     notifyListeners();
   }
@@ -161,15 +163,6 @@ class User with ChangeNotifier {
    _activeTrip.optimiseTrip();
   }
 
-  //activate Map polylines
-  void showRouteOnMap() {
-    if (_isInProgress) {
-      _isInProgress = false;
-    } else {
-      _isInProgress = true;
-    }
-    notifyListeners();
-  }
 
   void saveGPSLocation() async {
     final resp = await reverseGeocode(userGPS);

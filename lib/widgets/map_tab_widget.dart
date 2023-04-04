@@ -27,7 +27,7 @@ class _RoutingMapState extends State<RoutingMap> with
 
   //move camera to postion of marker
   void _animateToMarker(LatLng markerLocation) {
-    _mapController.animateCamera(CameraUpdate.newLatLng(markerLocation));
+    _mapController.animateCamera(CameraUpdate.newLatLngZoom(markerLocation, 12));
   }
 
   //Markerss
@@ -136,8 +136,8 @@ class _RoutingMapState extends State<RoutingMap> with
                 GoogleMap(
                   mapToolbarEnabled: false,
                   initialCameraPosition: const CameraPosition(
-                    target: LatLng(0, 0),
-                    zoom: 12,
+                    target: LatLng(-33.964393, 18.425172),
+                    zoom: 5,
                   ),
                   onMapCreated: _onMapCreated,
                   polylines: locationController.lines,
@@ -177,36 +177,6 @@ class _RoutingMapState extends State<RoutingMap> with
                     onPressed: () => {
                         user.saveGPSLocation()
                     },
-
-
-
-
-                      // showDialog(
-                      //   context: context, 
-                      //   builder: (BuildContext context) {
-                      //     return SimpleDialog(
-                      //       alignment: Alignment.center,
-                      //       contentPadding: const EdgeInsets.all(8.0),
-                      //       title: (user.userSavedLocation.contains(model)) 
-                      //         ? const Text("Location Already Saved")
-                      //         : const Text("Save Ths Location?"),
-
-                      //       children: [
-                      //         OutlinedButton(
-                      //           onPressed:() {       
-                      //             if (!user.userSavedLocation.contains(model)) {
-                      //               user.saveLocation(model);
-                      //             }
-                      //             Navigator.of(context).pop();
-                      //           },
-                      //           child: (user.userSavedLocation.contains(model)) 
-                      //             ? const Text("Close")
-                      //             : const Text("Save Ths Location?"),
-                      //         )
-                      //       ],
-                      //     );
-                      //   }
-                      // ),
                     child: const Icon(Icons.pin_drop),
                     ),
                   )

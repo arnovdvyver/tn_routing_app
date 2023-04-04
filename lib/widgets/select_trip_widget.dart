@@ -51,26 +51,8 @@ class _TripsListState extends State<TripsList> {
                          );
                         }
                       );
-                    // } else if ((user.trips[index]).name == user.selectedTrip.name) {
-                    //   showDialog(
-                    //     context: context, 
-                    //     builder: (BuildContext context) {
-                    //       return SimpleDialog(
-                    //         alignment: Alignment.center,
-                    //         contentPadding: const EdgeInsets.all(8.0),
-                    //         title: const Text("Cannot delete currenly selected route"),
-                    //         children: [
-                    //           OutlinedButton(
-                    //             onPressed:() {
-                    //               Navigator.of(context).pop();
-                    //              },
-                    //         child: const Text("Close")
-                    //           )
-                    //         ]   ,
-                    //      );
-                    //     }
-                    //   );
-                    // } else {
+                      
+                    } else {
                       //adjust list if free to do so
                       setState(() {
                         user.removeTrip(user.trips[index]);
